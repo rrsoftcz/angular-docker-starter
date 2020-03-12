@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+
+    wbadminer:
+      build:
+        context: .
+      stdin_open: true
+      volumes: 
+        - ./:/app
+      tty: true
+      ports :
+        - "4200:4200"
+      working_dir : /app
